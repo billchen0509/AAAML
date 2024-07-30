@@ -38,7 +38,7 @@ def run(fold):
             lbl.fit(df[col])
             df.loc[:, col] = lbl.transform(df[col])
     
-        df_train = df[df.kfold != fold].reset_index(drop = True)
+    df_train = df[df.kfold != fold].reset_index(drop = True)
     df_valid = df[df.kfold == fold].reset_index(drop = True)
 
     x_train = df_train[features].values
