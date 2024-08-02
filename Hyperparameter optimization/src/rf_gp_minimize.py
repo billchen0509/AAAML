@@ -10,6 +10,7 @@ from sklearn import model_selection
 
 from skopt import gp_minimize
 from skopt import space
+from skopt import plot_convergence
 
 def optimize(params, param_names,x,y):
     '''
@@ -116,3 +117,4 @@ if __name__ == "__main__":
         )
     )
     print(best_params)
+    plot_convergence(result)
